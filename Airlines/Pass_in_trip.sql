@@ -5,10 +5,10 @@
     [ID_psg] int NOT NULL, 
     [place] char(10) NOT NULL,
     primary key (trip_no, [date], ID_psg),
-    foreign key (trip_no) references Trip 
+    foreign key (trip_no) references Trip(trip_no)
     on update cascade 
     on delete cascade,
-    foreign key (ID_psg) references Passenger 
+    foreign key (ID_psg) references Passenger(ID_psg) 
     on update cascade 
     on delete cascade
 )
