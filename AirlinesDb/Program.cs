@@ -112,7 +112,7 @@ namespace AirlinesDb
                         };
                         trip
                             .PassInTrips
-                            .Add(new PassInTrip() 
+                            .Add(new PassInTrip()
                             {
                                 TripNo = tripNo[i],
                                 Date = DateTime.Now,
@@ -127,8 +127,9 @@ namespace AirlinesDb
                         context.Passengers.Add(passenger);
                         context.Trips.Add(trip);
 
-                    context.SaveChanges();
-                    transaction.Commit();
+                        context.SaveChanges();
+                        transaction.Commit();
+                    }
                 }
                 catch (Exception ex)
                 {
