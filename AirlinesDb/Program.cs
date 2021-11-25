@@ -126,14 +126,6 @@ namespace AirlinesDb
                         };
                         context.Passengers.Add(passenger);
                         context.Trips.Add(trip);
-                    }
-
-                    context.SaveChanges();
-
-                    foreach (var trip in context.Trips)
-                    {
-                        
-                    }
 
                     context.SaveChanges();
                     transaction.Commit();
